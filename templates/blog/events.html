@@ -1,0 +1,70 @@
+{% extends '../shared/_base.html' %}
+{% block title %} Home {% endblock %}
+{% block content %}
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<div class="container">
+    <div class="row">
+        <div class="offset-lg-2 col-lg-8">
+          <section id="blog-posts" class="blog-posts section">
+            <div class="container">
+              <div class="row gy-4">
+                <div class="col-12">
+                  <article>
+                    <div class="post-img">
+                      <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+                    </div>
+
+                    <h2 class="title">
+                      <a href="#">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+                    </h2>
+
+                    <div class="meta-top">
+                      <ul>
+                        <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2022-01-01">Jan 1, 2022</time></a></li>
+                      </ul>
+                    </div>
+
+                    <div class="content">
+                      <p>
+                        Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta.
+                        Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
+                      </p>
+
+                      <div class="read-more">
+                        <a href="#">Read More</a>
+                      </div>
+                    </div>
+
+                  </article>
+                </div>
+
+              </div><!-- End blog posts list -->
+
+            </div>
+          </section><!-- /Blog Posts Section -->
+
+           <!--
+          <section id="blog-pagination" class="blog-pagination section">
+            <div class="container">
+              <div class="d-flex justify-content-center">
+                <ul>
+                  <li><a href="#"><i class="bi bi-chevron-left"></i></a></li>
+                  <li><a href="#">1</a></li>
+                  <li><a href="#" class="active">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li>...</li>
+                  <li><a href="#">10</a></li>
+                  <li><a href="#"><i class="bi bi-chevron-right"></i></a></li>
+                </ul>
+              </div>
+            </div>
+
+          </section><!-- /Blog Pagination Section -->
+
+        </div>
+    </div>  
+</div>
+{% endblock content %}
