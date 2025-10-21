@@ -1,0 +1,53 @@
+# Byte-code files
+*.pyc
+__pycache__/
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Database files
+*.sqlite3
+db.sqlite3
+
+# Media and static files (if not managed by a separate service like S3)
+/media/
+/static_collected/
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.bak
+*.swo
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+tmp/
+temp/
+
+# Django specific files
+/local_settings.py  # If you use a separate file for local settings
+/settings_local.py  # Alternative name for local settings
+migrations/00*.py  # Exclude auto-generated migration files if not needed for version control
+
+# Python build artifacts
+dist/
+build/
+*.egg-info/
+
+# Coverage files
+.coverage
+.coverage.*
+
+# Pytest caches
+.pytest_cache/
+
+# Docker related files (if applicable)
+.dockerignore
+docker-compose.override.yml

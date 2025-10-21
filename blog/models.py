@@ -3,7 +3,7 @@ from django.utils.text import slugify
 from django.db import models
 
 
-class Post(models.Model):
+class Event(models.Model):
     title = models.CharField(max_length=200, null=False)
     content = RichTextField(null=False)
     published_date = models.DateTimeField(auto_now_add=True, auto_created=True)
