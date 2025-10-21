@@ -1,5 +1,5 @@
 {% extends '../shared/_base.html' %}
-{% block title %} Home {% endblock %}
+{% block title %} Events {% endblock %}
 {% block content %}
 {% load static %}
 {% load i18n %}
@@ -10,36 +10,33 @@
           <section id="blog-posts" class="blog-posts section">
             <div class="container">
               <div class="row gy-4">
+                {% for event in events %}
                 <div class="col-12">
                   <article>
                     <div class="post-img">
-                      <img src="assets/img/blog/blog-1.jpg" alt="" class="img-fluid">
+                      <img src="{% static 'img/blog/blog-1.jpg' %}" alt="" class="img-fluid">
                     </div>
 
                     <h2 class="title">
-                      <a href="#">Dolorum optio tempore voluptas dignissimos cumque fuga qui quibusdam quia</a>
+                      <a href="{% url 'event' event.slug %}">{{ event.title }}</a>
                     </h2>
 
                     <div class="meta-top">
                       <ul>
-                        <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2022-01-01">Jan 1, 2022</time></a></li>
+                        <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="{% url 'event' event.slug %}"><time datetime="2022-01-01">{{event.published_date|date:"d M, Y"}}</time></a></li>
                       </ul>
                     </div>
 
                     <div class="content">
-                      <p>
-                        Similique neque nam consequuntur ad non maxime aliquam quas. Quibusdam animi praesentium. Aliquam et laboriosam eius aut nostrum quidem aliquid dicta.
-                        Et eveniet enim. Qui velit est ea dolorem doloremque deleniti aperiam unde soluta. Est cum et quod quos aut ut et sit sunt. Voluptate porro consequatur assumenda perferendis dolore.
-                      </p>
-
+                      <p>{{ event.content|safe }}</p>
                       <div class="read-more">
-                        <a href="#">Read More</a>
+                        <a href="{% url 'event' event.slug %}">Read More</a>
                       </div>
                     </div>
 
                   </article>
                 </div>
-
+                {% endfor %}
               </div><!-- End blog posts list -->
 
             </div>

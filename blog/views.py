@@ -3,16 +3,16 @@ from .models import Event
 
 
 def all_events(request):
-    #articles = get_list_or_404(Post)
-    #context = {
-        #'articles': articles
-    #}
-    return render(request, 'blog/events.html')
+    events = get_list_or_404(Event)
+    context = {
+        'events': events
+    }
+    return render(request, 'blog/events.html', context)
 
 
 def get_event(request, event_slug):
-    article = get_object_or_404(Event, slug=event_slug)
+    event = get_object_or_404(Event, slug=event_slug)
     context = {
-        'post': article
+        'event': event
     }
-    return render(request, 'blog/post.html', context)
+    return render(request, 'blog/event.html', context)

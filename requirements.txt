@@ -1,0 +1,10 @@
+asgiref==3.10.0
+Django==5.2.7
+django-ckeditor==6.7.3
+django-js-asset==3.1.2
+psycopg2==2.9.11
+psycopg2-binary==2.9.11
+python-dotenv==1.1.1
+sqlparse==0.5.3
+tzdata==2025.2
+whitenoise==6.11.0
