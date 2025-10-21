@@ -1,0 +1,45 @@
+# Python bytecode
+*.pyc
+__pycache__/
+
+# Virtual environment
+venv/
+env/
+.env/
+
+# SQLite database
+*.sqlite3
+db.sqlite3
+
+# Log files
+*.log
+
+# Media and static files (if managed separately or generated)
+media/
+static_collected/ # If using collectstatic
+
+# IDE and editor specific files
+.idea/
+.vscode/
+*.swp
+*~
+
+# Operating System specific files
+.DS_Store
+Thumbs.db
+
+# Testing and coverage reports
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+
+# Deployment files
+*.tar.gz
+*.zip
+
+# Local settings (if used to override production settings with sensitive info)
+local_settings.py
+
+# Django migrations cache (if not tracking specific migration files)
+# migrations/**/__pycache__/
