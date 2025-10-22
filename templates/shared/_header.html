@@ -8,40 +8,12 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li class="dropdown">
-            <a href="#"><span>Academics</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Introduction</a></li>
-              <li><a href="#">Admission</a></li>
-              <li><a href="#">Graduation</a></li>
-              <li><a href="#">Careers</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#"><span>Co-curricular</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Introduction</a></li>
-              <li><a href="#">Clubs</a></li>
-              <li><a href="#">Sporting</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#"><span>School Life</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Boarding Life</a></li>
-              <li><a href="#">Gallery</a></li>
-            </ul>
-          </li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#co_curricular">Co-curricular</a></li>
+          <li><a href="#school_life">School Life</a></li>
           <li><a href="{% url 'events' %}">Events</a></li>
-          <li class="dropdown">
-            <a href="#"><span>Downloads</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Newsletters</a></li>
-              <li><a href="#">Timetable</a></li>
-              <li><a href="#">School Calendar</a></li>
-              <li><a href="#">Student handbook</a></li>
-            </ul>
-          </li>
+          <li><a href="{% url 'events' %}">Teachers</a></li>
+          <li><a href="#academics">Academics</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

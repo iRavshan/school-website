@@ -19,7 +19,7 @@
                                     </ul>
                                 </div><!-- End meta top -->
                                 <div class="content">
-                                    {{ event.content|striptags|truncatewords:30 }}
+                                    {{ event.content|safe }}
                                 </div><!-- End post content -->
                             </article>
                         </div>
