@@ -13,7 +13,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
-CSRF_TRUSTED_ORIGINS = ['https://karships.org', 'http://karships.org']
+CSRF_TRUSTED_ORIGINS = ['https://www.karshischool.org', 'http://www.karshischool.org']
 
 SECURE_SSL_REDIRECT = False
 
