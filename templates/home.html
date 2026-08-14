@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section" id="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="{% static 'videos/hero_video.mp4' %}" type="video/mp4">
+    </video>
+    <div class="hero-content">
+        <h1 class="hero-title" data-uz="Kelajak yetakchilarini bugundan tayyorlaymiz" data-en="Preparing future leaders from today">Kelajak yetakchilarini bugundan tayyorlaymiz</h1>
+        <p class="hero-subtitle" data-uz="Prezident maktabi — iqtidorli yoshlar uchun zamonaviy bilim, xalqaro standartlar va kuchli tarbiya uyg'unlashgan ta'lim maskani. Biz global fikrlaydigan, mas'uliyatli va raqobatbardosh avlodni yetishtiramiz." data-en="Presidential School — a modern educational institution where contemporary knowledge, international standards, and strong values converge for talented youth. We nurture globally-minded, responsible, and competitive generations.">Prezident maktabi — iqtidorli yoshlar uchun zamonaviy bilim, xalqaro standartlar va kuchli tarbiya uyg'unlashgan ta'lim maskani. Biz global fikrlaydigan, mas'uliyatli va raqobatbardosh avlodni yetishtiramiz.</p>
+        <div class="hero-actions">
+            <a href="https://ariza.piima.uz/" target="_blank" class="btn btn-primary" data-uz="Hoziroq ariza berish" data-en="Apply Now">Hoziroq ariza berish</a>
+            <a href="#" class="btn btn-transparent" data-uz="Batafsil ma'lumot" data-en="Learn More">Batafsil ma'lumot</a>
+        </div>
+    </div>
+</section>
+
+<!-- Partners Section -->
+<section class="section section-alt partners-section" id="partners">
+    <div class="container">
+        <h2 class="section-title" data-uz="Bizning hamkorlar" data-en="Our Partners">Bizning hamkorlar</h2>
+        <div class="partners-carousel">
+            <button class="carousel-arrow prev" aria-label="Previous">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="carousel-wrapper">
+                <div class="carousel-track">
+                    {% for partner in partner_images %}
+                    <div class="partner-card">
+                        <img src="{% static partner.image %}" alt="{{ partner.name }}">
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <button class="carousel-arrow next" aria-label="Next">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</section>
+{% endblock %}

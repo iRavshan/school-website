@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Qarshi shahridagi Prezident maktabi — iqtidorli yoshlar uchun zamonaviy ta'lim maskani">
+    <title>Prezident Maktabi — Qarshi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <!-- ========== Top Header ========== -->
+    <div class="top-header">
+        <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
+            <div class="top-header-left">
+                <a href="tel:+998912345678"><i class="fa-solid fa-phone"></i> <span data-uz="+998 75 220 07 70" data-en="+998 75 220 07 70">+998 75 220 07 70</span></a>
+                <a href="mailto:info@karships.uz"><i class="fa-solid fa-envelope"></i> info@karships.uz</a>
+            </div>
+            <div class="top-header-right">
+                <a href="https://www.instagram.com/pmarshi_official/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="http://t.me/pmqarshi" target="_blank" rel="noopener" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                <a href="https://www.facebook.com/piima.uz" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://youtube.com/@pmqarshi_official1?si=bFywTwTX6RpYDwBB" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+
+                <div class="lang-dropdown" id="langDropdown">
+                    <button class="lang-toggle" id="langToggle" type="button">
+                        <i class="fa-solid fa-globe"></i>
+                        <span id="langDisplay">O'zbek</span>
+                        <i class="fa-solid fa-chevron-down lang-chevron"></i>
+                    </button>
+                    <div class="lang-options" id="langOptions">
+                        <button class="lang-option active" data-lang="uz" type="button">O'zbek tili</button>
+                        <button class="lang-option" data-lang="en" type="button">English</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== Main Header ========== -->
+    <header class="main-header" id="mainHeader">
+        <nav class="nav-left">
+            <div class="nav-dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-uz="Biz haqimizda" data-en="About Us">Biz haqimizda <i class="fa-solid fa-chevron-down"></i></a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item" data-uz="Maktab haqida" data-en="About School">Maktab haqida</a>
+                    <a href="#" class="dropdown-item" data-uz="Rahbariyat" data-en="Leadership">Rahbariyat</a>
+                    <a href="#" class="dropdown-item" data-uz="Pedagoglar" data-en="Teachers">Pedagoglar</a>
+                    <a href="#" class="dropdown-item" data-uz="Bo'sh ish o'rinlari" data-en="Vacancies">Bo'sh ish o'rinlari</a>
+                </div>
+            </div>
+            <a href="#" class="nav-link" data-uz="Ta'lim" data-en="Education">Ta'lim</a>
+            <a href="#" class="nav-link" data-uz="Yangiliklar" data-en="News">Yangiliklar</a>
+        </nav>
+
+        <a href="/" class="header-logo">
+            <img src="{% static 'images/logo/logo_main.svg' %}" alt="Prezident Maktabi">
+        </a>
+
+        <nav class="nav-right">
+            <a href="#" class="nav-link" data-uz="Qabul" data-en="Admission">Qabul</a>
+            <a href="#" class="nav-link" data-uz="Akademik kalendar" data-en="Academic Calendar">Akademik kalendar</a>
+            <a href="#" class="nav-link" data-uz="Bog'lanish" data-en="Contact">Bog'lanish</a>
+        </nav>
+
+        <button class="mobile-menu-toggle" aria-label="Menu" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- ========== Mobile Navigation ========== -->
+    <nav class="mobile-nav" id="mobileNav">
+        <div class="mobile-dropdown">
+            <button class="mobile-dropdown-toggle" data-uz="Biz haqimizda" data-en="About Us" type="button">Biz haqimizda <i class="fa-solid fa-chevron-down"></i></button>
+            <div class="mobile-dropdown-menu">
+                <a href="#" data-uz="Maktab haqida" data-en="About School">Maktab haqida</a>
+                <a href="#" data-uz="Rahbariyat" data-en="Leadership">Rahbariyat</a>
+                <a href="#" data-uz="Pedagoglar" data-en="Teachers">Pedagoglar</a>
+                <a href="#" data-uz="Bo'sh ish o'rinlari" data-en="Vacancies">Bo'sh ish o'rinlari</a>
+            </div>
+        </div>
+        <a href="#" class="mobile-nav-link" data-uz="Ta'lim" data-en="Education">Ta'lim</a>
+        <a href="#" class="mobile-nav-link" data-uz="Qabul" data-en="Admission">Qabul</a>
+        <a href="#" class="mobile-nav-link" data-uz="Akademik kalendar" data-en="Academic Calendar">Akademik kalendar</a>
+        <a href="#" class="mobile-nav-link" data-uz="Bog'lanish" data-en="Contact">Bog'lanish</a>
+    </nav>
+
+    <!-- ========== Page Content ========== -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- ========== Footer ========== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="{% static 'images/logo/logo_main.svg' %}" alt="Prezident Maktabi">
+                    </div>
+                    <p class="footer-desc" data-uz="Qarshi shahridagi Prezident maktabi — iqtidorli yoshlar uchun zamonaviy ta'lim maskani." data-en="Presidential School in Qarshi — a modern educational institution for talented youth.">Qarshi shahridagi Prezident maktabi — iqtidorli yoshlar uchun zamonaviy ta'lim maskani.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-heading" data-uz="Tezkor havolalar" data-en="Quick Links">Tezkor havolalar</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-uz="Maktab haqida" data-en="About School">Maktab haqida</a></li>
+                        <li><a href="#" data-uz="Ta'lim" data-en="Education">Ta'lim</a></li>
+                        <li><a href="#" data-uz="Qabul" data-en="Admission">Qabul</a></li>
+                        <li><a href="#" data-uz="Akademik kalendar" data-en="Academic Calendar">Akademik kalendar</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3 class="footer-heading" data-uz="Bog'lanish" data-en="Contact">Bog'lanish</h3>
+                    <div class="footer-contact">
+                        <p><i class="fa-solid fa-location-dot"></i> <span data-uz="Qarshi shahri, Mustaqillik shox ko'chasi, 2" data-en="2, Mustaqillik St., Karshi City">Qarshi shahri, O'zbekiston</span></p>
+                        <p><i class="fa-solid fa-phone"></i> +998 75 220 07 70</p>
+                        <p><i class="fa-solid fa-envelope"></i> info@karships.uz</p>
+                    </div>
+                    <div class="footer-socials">
+                        <a href="https://www.instagram.com/pmarshi_official/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="http://t.me/pmqarshi" target="_blank" rel="noopener" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://www.facebook.com/piima.uz" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://youtube.com/@pmqarshi_official1?si=bFywTwTX6RpYDwBB" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-uz="© 2026 Qarshi shahridagi Prezident maktabi." data-en="© 2026 Presidential School, Qarshi. All rights reserved.">© 2026 Prezident Maktabi, Qarshi. Barcha huquqlar himoyalangan.</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
