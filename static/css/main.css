@@ -544,14 +544,200 @@ button {
 }
 
 .btn-transparent {
-  background-color: transparent;
+  background-color: rgba(255, 255, 255, 0.1019607843);
   color: var(--white);
-  border-color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  gap: 12px;
 }
 
 .btn-transparent:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   President Quote Section
+   ========================================================================== */
+.president-quote-section {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0;
+  margin: 80px auto;
+}
+
+.president-quote-bg {
+  position: absolute;
+  inset: -20px; /* pull out slightly to avoid edges blurring in */
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: -2;
+}
+
+.president-quote-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(13, 36, 96, 0.75);
+  z-index: -1;
+}
+
+.president-quote-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.president-image img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  display: block;
+  margin: 0 auto;
+}
+
+.president-text-content {
+  color: var(--white);
+}
+
+.quote-heading {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 700;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.quote-text {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  line-height: 1.8;
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 40px;
+  opacity: 0.95;
+}
+
+.quote-author-block {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.gerb-icon {
+  width: 64px;
+  height: auto;
+}
+
+.author-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: var(--white);
+}
+
+.author-title {
+  font-size: 1.05rem;
+  font-weight: 300;
+  margin: 0;
+  opacity: 0.85;
+}
+
+/* ==========================================================================
+   About School Section
+   ========================================================================== */
+.about-school-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.about-title {
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.about-text {
+  color: #334155;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.btn-gradient-primary {
+  background: linear-gradient(180deg, #0d2460 0%, #2a407a 100%);
+  color: var(--white);
+  box-shadow: 0 4px 12px rgba(13, 36, 96, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-gradient-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(13, 36, 96, 0.4);
+  color: var(--white);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.about-grid-item {
+  border-radius: 16px;
+  overflow: hidden;
+  height: 240px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.about-grid-item.image-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.about-grid-item.image-item:hover img {
+  transform: scale(1.05);
+}
+
+.about-grid-item.card-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+}
+
+.about-grid-item.primary-bg {
+  background-color: var(--primary);
+}
+
+.about-grid-item.white-bg {
+  background-color: var(--white);
+}
+
+.card-logo {
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.4;
+}
+
+.text-white {
+  color: var(--white) !important;
 }
 
 /* ==========================================================================
@@ -882,6 +1068,31 @@ button {
     gap: 32px;
   }
 
+  .president-quote-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .about-school-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .about-grid-item {
+    height: 180px;
+  }
+
+  .quote-author-block {
+    justify-content: center;
+    text-align: left;
+  }
+
   .partners-carousel {
     padding: 0 40px;
   }
@@ -894,6 +1105,14 @@ button {
 
   .top-header {
     height: 40px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid-item {
+    height: 220px;
   }
 
   .section {
