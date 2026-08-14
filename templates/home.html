@@ -64,11 +64,66 @@
             <div class="about-grid-item card-item primary-bg">
                 <img src="{% static 'images/logo/logo_main.svg' %}" alt="Logo" class="card-logo">
             </div>
-            <div class="about-grid-item card-item primary-bg">
-                <h3 class="card-title text-white">Qarshi shahridagi Prezident maktabi</h3>
+            <div class="about-grid-item card-item primary-bg" style="background-image: url('{% static 'images/about-img.svg' %}'); background-size: cover; background-position: center; position: relative;">
+                <h3 class="card-title text-white" style="position: relative; z-index: 2;">Qarshi shahridagi Prezident maktabi</h3>
+                <div style="position: absolute; inset: 0; background-color: rgba(13, 36, 96, 0.4); z-index: 1;"></div>
             </div>
             <div class="about-grid-item image-item">
                 <img src="{% static 'images/president.png' %}" alt="School View 2">
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Educational Program Section -->
+<section class="section education-program-section" id="program">
+    <div class="container">
+        <h2 class="section-title" data-uz="Ta'lim dasturi" data-en="Educational Program">Ta'lim dasturi</h2>
+        <div class="program-grid">
+            <!-- Card 1 -->
+            <div class="program-card" style="background-color: #48A6A7;">
+                <div class="program-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <h3 class="program-card-title" data-uz="5–11-sinflar" data-en="Grades 5-11">5–11-sinflar</h3>
+                <p class="program-card-text" data-uz="milliy va xalqaro fanlarni o‘zlashtirish" data-en="mastering national and international subjects">milliy va xalqaro fanlarni o‘zlashtirish</p>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="program-card" style="background-color: #608BC1;">
+                <div class="program-icon">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <h3 class="program-card-title" data-uz="Cambridge dasturi" data-en="Cambridge Program">Cambridge dasturi</h3>
+                <p class="program-card-text" data-uz="Xalqaro standartlar asosida ta'lim" data-en="Education based on international standards">Xalqaro standartlar asosida ta'lim</p>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="program-card" style="background-color: #155E95;">
+                <div class="program-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <h3 class="program-card-title" data-uz="STEAM ta'limi" data-en="STEAM Education">STEAM ta'limi</h3>
+                <p class="program-card-text" data-uz="Zamonaviy texnologiyalar va amaliyot" data-en="Modern technologies and practice">Zamonaviy texnologiyalar va amaliyot</p>
+            </div>
+        </div>
+        
+        <div class="program-grid-2">
+            <!-- Card 4 -->
+            <div class="program-card" style="background-color: #2A407A;">
+                <div class="program-icon">
+                    <i class="fa-solid fa-award"></i>
+                </div>
+                <h3 class="program-card-title" data-uz="AS va A darajalar" data-en="AS and A Levels">AS va A darajalar</h3>
+                <p class="program-card-text" data-uz="matematika va tanlov fanlari (kimyo, fizika, biologiya va informatika)" data-en="mathematics and elective subjects (chemistry, physics, biology and computer science)">matematika va tanlov fanlari (kimyo, fizika, biologiya va informatika)</p>
+            </div>
+            
+            <!-- Card 5 -->
+            <div class="program-card" style="background-color: #147E5C;">
+                <div class="program-icon">
+                    <i class="fa-solid fa-microscope"></i>
+                </div>
+                <h3 class="program-card-title" data-uz="IGCSE fanlari" data-en="IGCSE Subjects">IGCSE fanlari</h3>
+                <p class="program-card-text" data-uz="Matematika, fizika, kimyo, biologiya va informatika" data-en="Mathematics, physics, chemistry, biology and computer science">Matematika, fizika, kimyo, biologiya va informatika</p>
             </div>
         </div>
     </div>

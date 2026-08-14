@@ -741,6 +741,76 @@ button {
 }
 
 /* ==========================================================================
+   Educational Program Section
+   ========================================================================== */
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.program-grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.program-card {
+  padding: 48px 32px;
+  border-radius: 16px;
+  text-align: center;
+  color: var(--white);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.program-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+.program-icon {
+  position: absolute;
+  right: -10px;
+  bottom: -20px;
+  font-size: 10rem;
+  opacity: 0.15;
+  z-index: 1;
+  pointer-events: none;
+  transition: transform 0.5s ease;
+}
+
+.program-card:hover .program-icon {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+.program-card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  line-height: 1.3;
+  color: var(--white);
+  position: relative;
+  z-index: 2;
+}
+
+.program-card-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-weight: 300;
+  opacity: 0.95;
+  position: relative;
+  z-index: 2;
+}
+
+/* ==========================================================================
    8. Section Base
    ========================================================================== */
 .section {
@@ -1086,6 +1156,16 @@ button {
 
   .about-grid-item {
     height: 180px;
+  }
+
+  .program-grid,
+  .program-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .program-grid-2 {
+    margin-top: 24px;
   }
 
   .quote-author-block {
