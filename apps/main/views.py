@@ -14,3 +14,6 @@ def home(request):
                     'image': f'images/partners/{filename}',
                 })
     return render(request, 'home.html', {'partner_images': partner_images})
+
+def contact(request):
+    return render(request, 'contact.html')

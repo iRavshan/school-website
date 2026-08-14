@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="section section-alt" style="padding-bottom: 80px; min-height: calc(100vh - 400px);">
+    <div class="container">
+        
+        <!-- Pedagoglar (Teachers) Section -->
+        <h1 class="section-title" data-uz="O'qituvchilar" data-en="Teachers">O'qituvchilar</h1>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 40px; margin-top: 48px; margin-bottom: 80px;">
+            {% for teacher in teachers %}
+            <div class="member-card" style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; transition: transform 0.3s ease;">
+                <div style="width: 100%; height: 320px; overflow: hidden; background-color: #f1f5f9;">
+                    {% if teacher.photo %}
+                    <img src="{{ teacher.photo.url }}" alt="{{ teacher.first_name }}" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+                    {% else %}
+                    <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: #cbd5e1;">
+                        <i class="fa-solid fa-user"></i>
+                    </div>
+                    {% endif %}
+                </div>
+                <div style="padding: 24px;">
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--primary); margin-bottom: 8px;">{{ teacher.first_name }} {{ teacher.last_name }}</h3>
+                    <p style="color: #64748b; font-size: 1rem; margin-bottom: 16px; font-weight: 500;">{{ teacher.occupation }}</p>
+                    {% if teacher.is_local %}
+                    <span style="display: inline-block; padding: 4px 12px; background-color: #e0f2fe; color: #0284c7; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Mahalliy mutaxassis</span>
+                    {% else %}
+                    <span style="display: inline-block; padding: 4px 12px; background-color: #fce7f3; color: #db2777; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Xorijiy mutaxassis</span>
+                    {% endif %}
+                </div>
+            </div>
+            {% empty %}
+            <div style="grid-column: 1 / -1; text-align: center; padding: 20px 0; color: #64748b; font-size: 1.1rem;">
+                <p>Hozircha ma'lumot kiritilmagan.</p>
+            </div>
+            {% endfor %}
+        </div>
+        
+
+
+    </div>
+</section>
+
+<style>
+    .member-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 16px 40px rgba(0,0,0,0.1) !important;
+    }
+</style>
+{% endblock %}

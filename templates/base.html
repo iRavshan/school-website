@@ -55,23 +55,23 @@
                 <a href="#" class="nav-link dropdown-toggle" data-uz="Biz haqimizda" data-en="About Us">Biz haqimizda <i class="fa-solid fa-chevron-down"></i></a>
                 <div class="dropdown-menu">
                     <a href="#" class="dropdown-item" data-uz="Maktab haqida" data-en="About School">Maktab haqida</a>
-                    <a href="#" class="dropdown-item" data-uz="Rahbariyat" data-en="Leadership">Rahbariyat</a>
-                    <a href="#" class="dropdown-item" data-uz="Pedagoglar" data-en="Teachers">Pedagoglar</a>
-                    <a href="#" class="dropdown-item" data-uz="Bo'sh ish o'rinlari" data-en="Vacancies">Bo'sh ish o'rinlari</a>
+                    <a href="{% url 'members:leadership' %}" class="dropdown-item" data-uz="Rahbariyat" data-en="Leadership">Rahbariyat</a>
+                    <a href="{% url 'members:teachers' %}" class="dropdown-item" data-uz="Pedagoglar" data-en="Teachers">Pedagoglar</a>
+                    <a href="https://vacancy.piima.uz/" target="_blank" class="dropdown-item" data-uz="Bo'sh ish o'rinlari" data-en="Vacancies">Bo'sh ish o'rinlari</a>
                 </div>
             </div>
             <a href="#" class="nav-link" data-uz="Ta'lim" data-en="Education">Ta'lim</a>
             <a href="#" class="nav-link" data-uz="Yangiliklar" data-en="News">Yangiliklar</a>
         </nav>
 
-        <a href="/" class="header-logo">
+        <a href="{% url 'main:home' %}" class="header-logo">
             <img src="{% static 'images/logo/logo_main.svg' %}" alt="Prezident Maktabi">
         </a>
 
         <nav class="nav-right">
             <a href="#" class="nav-link" data-uz="Qabul" data-en="Admission">Qabul</a>
             <a href="#" class="nav-link" data-uz="Akademik kalendar" data-en="Academic Calendar">Akademik kalendar</a>
-            <a href="#" class="nav-link" data-uz="Bog'lanish" data-en="Contact">Bog'lanish</a>
+            <a href="{% url 'main:contact' %}" class="nav-link" data-uz="Bog'lanish" data-en="Contact">Bog'lanish</a>
         </nav>
 
         <button class="mobile-menu-toggle" aria-label="Menu" type="button">

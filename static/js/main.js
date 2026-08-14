@@ -39,6 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
             e.stopPropagation();
             langOptions.classList.toggle('show');
             langDropdownEl.classList.toggle('open');
+            const topHeader = document.querySelector('.top-header');
+            if (topHeader) topHeader.classList.toggle('elevated');
         });
         
         langOptions.querySelectorAll('[data-lang]').forEach(option => {
@@ -53,6 +55,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     switchLanguage(lang);
                     langOptions.classList.remove('show');
                     langDropdownEl.classList.remove('open');
+                    const topHeader = document.querySelector('.top-header');
+                    if (topHeader) topHeader.classList.remove('elevated');
                 }
             });
         });
@@ -228,6 +232,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (langOptions && langOptions.classList.contains('show') && !e.target.closest('.lang-dropdown')) {
             langOptions.classList.remove('show');
             if (langDropdownEl) langDropdownEl.classList.remove('open');
+            const topHeader = document.querySelector('.top-header');
+            if (topHeader) topHeader.classList.remove('elevated');
         }
         
         // Close mobile menu

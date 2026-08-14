@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="section section-alt" style="padding-bottom: 100px; min-height: calc(100vh - 400px);">
+    <div class="container">
+        <h1 class="section-title" data-uz="Bog'lanish" data-en="Contact Us">Bog'lanish</h1>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin-top: 48px; align-items: start;">
+            <!-- Left Side: Contact Info -->
+            <div>
+                <h3 style="font-size: 1.75rem; color: var(--primary); margin-bottom: 24px; font-weight: 700;" data-uz="Biz bilan aloqa" data-en="Get in touch">Biz bilan aloqa</h3>
+                <p style="margin-bottom: 32px; color: #334155; line-height: 1.8; font-size: 1.1rem;" data-uz="Qarshi shahridagi Prezident maktabiga oid savollaringiz bo'lsa, biz bilan bog'laning. Bizning mutaxassislarimiz sizga tez orada javob berishadi." data-en="If you have any questions about the Presidential School in Karshi, please contact us. Our specialists will respond shortly.">Qarshi shahridagi Prezident maktabiga oid savollaringiz bo'lsa, biz bilan bog'laning. Bizning mutaxassislarimiz sizga tez orada javob berishadi.</p>
+                <div style="display: flex; flex-direction: column; gap: 24px;">
+                    <div style="display: flex; align-items: flex-start; gap: 16px;">
+                        <div style="width: 56px; height: 56px; border-radius: 50%; background-color: var(--primary); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0; box-shadow: 0 8px 24px rgba(13, 36, 96, 0.2);">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div style="padding-top: 4px;">
+                            <strong style="display: block; color: var(--primary); font-size: 1.1rem; margin-bottom: 4px;" data-uz="Manzil:" data-en="Address:">Manzil:</strong>
+                            <span style="color: #334155; line-height: 1.5; display: block;" data-uz="Qarshi shahri, Mustaqillik shox ko'chasi, 2" data-en="2, Mustaqillik St., Karshi  City">Qarshi shahri, Mustaqillik shox ko'chasi, 2</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 16px;">
+                        <div style="width: 56px; height: 56px; border-radius: 50%; background-color: var(--primary); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0; box-shadow: 0 8px 24px rgba(13, 36, 96, 0.2);">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div style="padding-top: 4px;">
+                            <strong style="display: block; color: var(--primary); font-size: 1.1rem; margin-bottom: 4px;" data-uz="Telefon:" data-en="Phone:">Telefon:</strong>
+                            <a href="tel:+998752200770" style="color: #334155; text-decoration: none; display: block; line-height: 1.5; transition: color 0.3s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='#334155'">+998 75 220 07 70</a>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: flex-start; gap: 16px;">
+                        <div style="width: 56px; height: 56px; border-radius: 50%; background-color: var(--primary); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0; box-shadow: 0 8px 24px rgba(13, 36, 96, 0.2);">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div style="padding-top: 4px;">
+                            <strong style="display: block; color: var(--primary); font-size: 1.1rem; margin-bottom: 4px;" data-uz="Email:" data-en="Email:">Email:</strong>
+                            <a href="mailto:info@karships.uz" style="color: #334155; text-decoration: none; display: block; line-height: 1.5; transition: color 0.3s;" onmouseover="this.style.color='var(--primary)'" onmouseout="this.style.color='#334155'">info@karships.uz</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Side: Contact Form -->
+            <div>
+                <form style="background: white; padding: 40px; border-radius: 20px; box-shadow: 0 16px 40px rgba(0,0,0,0.06);">
+                    <div style="margin-bottom: 24px;">
+                        <label style="display: block; margin-bottom: 10px; color: var(--primary); font-weight: 600;" data-uz="Ismingiz" data-en="Your Name">Ismingiz</label>
+                        <input type="text" style="width: 100%; padding: 14px 18px; border: 1.5px solid #e2e8f0; border-radius: 10px; outline: none; font-family: inherit; font-size: 1rem; transition: border-color 0.3s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='#e2e8f0'" placeholder="Ismingizni kiriting" required>
+                    </div>
+                    <div style="margin-bottom: 24px;">
+                        <label style="display: block; margin-bottom: 10px; color: var(--primary); font-weight: 600;" data-uz="Telefon raqamingiz" data-en="Your Phone">Telefon raqamingiz</label>
+                        <input type="text" style="width: 100%; padding: 14px 18px; border: 1.5px solid #e2e8f0; border-radius: 10px; outline: none; font-family: inherit; font-size: 1rem; transition: border-color 0.3s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='#e2e8f0'" placeholder="+998 (__) ___-__-__" required>
+                    </div>
+                    <div style="margin-bottom: 32px;">
+                        <label style="display: block; margin-bottom: 10px; color: var(--primary); font-weight: 600;" data-uz="Xabaringiz" data-en="Your Message">Xabaringiz</label>
+                        <textarea rows="5" style="width: 100%; padding: 14px 18px; border: 1.5px solid #e2e8f0; border-radius: 10px; outline: none; font-family: inherit; font-size: 1rem; resize: vertical; transition: border-color 0.3s;" onfocus="this.style.borderColor='var(--primary)'" onblur="this.style.borderColor='#e2e8f0'" placeholder="Xabaringizni yozing..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-gradient-primary" style="width: 100%; justify-content: center; font-size: 1.1rem; padding: 16px;" data-uz="Yuborish" data-en="Send Message">Yuborish</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    @media (max-width: 768px) {
+        .section-alt .container > div {
+            grid-template-columns: 1fr !important;
+            gap: 40px !important;
+        }
+        .section-alt {
+            padding-top: 140px !important;
+            padding-bottom: 60px !important;
+        }
+    }
+</style>
+{% endblock %}
