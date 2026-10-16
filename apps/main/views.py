@@ -17,3 +17,6 @@ def home(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+def education(request):
+    return render(request, 'education.html')
