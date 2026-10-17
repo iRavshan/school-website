@@ -1,0 +1,243 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="section section-alt" style="padding-top: 60px; padding-bottom: 40px;">
+    <div class="container">
+        <div style="text-align: center; max-width: 900px; margin: 0 auto;">
+            <span style="display: inline-block; padding: 6px 16px; background-color: rgba(13, 36, 96, 0.08); color: var(--primary); border-radius: 30px; font-size: 0.9rem; font-weight: 600; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px;" data-uz="2026-2027 o'quv yili" data-en="2026-2027 Academic Year">2026-2027 o'quv yili</span>
+            <h1 class="section-title" style="margin-bottom: 16px;" data-uz="Akademik taqvim" data-en="Academic Calendar">Akademik taqvim</h1>
+            <p style="color: #334155; font-size: 1.15rem; line-height: 1.8; margin-bottom: 8px;" data-uz="Prezident maktablari uchun 2026-2027-o‘quv yiliga mo‘ljallangan II semestrli Akademik taqvim." data-en="Two-semester Academic Calendar for Presidential Schools for the 2026-2027 academic year.">Prezident maktablari uchun 2026-2027-o‘quv yiliga mo‘ljallangan II semestrli Akademik taqvim.</p>
+            <span style="display: inline-block; font-size: 0.9rem; color: #64748b;" data-uz="Ixtisoslashtirilgan ta‘lim muassasalari agentligi direktorining 2026-yil “30”-iyuldagi 134-AF-son buyrug‘iga 5-ilova" data-en="Appendix 5 to Order No. 134-AF of the Director of the Agency for Specialized Educational Institutions dated July 30, 2026">Ixtisoslashtirilgan ta‘lim muassasalari agentligi direktorining 2026-yil “30”-iyuldagi 134-AF-son buyrug‘iga 5-ilova</span>
+        </div>
+    </div>
+</section>
+
+<!-- Main Calendar Content -->
+<section class="section" style="background-color: var(--white); padding: 60px 0 80px;">
+    <div class="container">
+        
+        <!-- Action Banner with PDF Download -->
+        <div style="background: linear-gradient(135deg, #0D2460 0%, #1e3a8a 100%); border-radius: 20px; padding: 32px 40px; color: white; display: flex; align-items: center; justify-content: space-between; gap: 24px; box-shadow: 0 16px 36px rgba(13, 36, 96, 0.16); margin-bottom: 50px;" class="calendar-action-banner">
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <div style="width: 56px; height: 56px; border-radius: 14px; background: rgba(255, 255, 255, 0.15); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; flex-shrink: 0;">
+                    <i class="fa-solid fa-file-pdf" style="color: #f87171;"></i>
+                </div>
+                <div>
+                    <h3 style="font-size: 1.35rem; font-weight: 700; color: white; margin: 0 0 6px;" data-uz="Rasmiy taqvim hujjati (PDF)" data-en="Official Calendar Document (PDF)">Rasmiy taqvim hujjati (PDF)</h3>
+                    <p style="margin: 0; font-size: 0.95rem; color: rgba(255, 255, 255, 0.85);" data-uz="Akademik taqvimning to'liq PDF nusxasini yuklab oling yoki ko'ring" data-en="Download or view the full official PDF version of the academic calendar">Akademik taqvimning to'liq PDF nusxasini yuklab oling yoki ko'ring</p>
+                </div>
+            </div>
+            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+                <a href="{% static 'documents/akademik_kalendar_2026_2027.pdf' %}" download class="btn" style="background-color: #38bdf8; color: #0f172a; font-weight: 600; padding: 12px 24px; border-radius: 12px; display: inline-flex; align-items: center; gap: 8px; text-decoration: none;">
+                    <i class="fa-solid fa-download"></i>
+                    <span data-uz="PDF yuklab olish" data-en="Download PDF">PDF yuklab olish</span>
+                </a>
+                <a href="{% static 'documents/akademik_kalendar_2026_2027.pdf' %}" target="_blank" class="btn" style="background-color: rgba(255, 255, 255, 0.15); color: white; font-weight: 600; padding: 12px 24px; border-radius: 12px; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; border: 1px solid rgba(255,255,255,0.3);">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <span data-uz="Yangi oynada ochish" data-en="Open in New Tab">Yangi oynada ochish</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Key Calendar Highlights Grid -->
+        <div style="margin-bottom: 60px;">
+            <div style="text-align: center; margin-bottom: 36px;">
+                <h2 class="section-title" style="margin-bottom: 12px;" data-uz="Taqvimning asosiy ko‘rsatkichlari" data-en="Key Calendar Highlights">Taqvimning asosiy ko‘rsatkichlari</h2>
+                <p style="color: #64748b; font-size: 1.05rem;" data-uz="Semestrlar, o‘qish kunlari va ta’til muddatlari" data-en="Semesters, study days and vacation periods">Semestrlar, o‘qish kunlari va ta’til muddatlari</p>
+            </div>
+
+            <!-- Highlights Cards -->
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;" class="calendar-highlights-grid">
+                
+                <!-- 5-8 sinflar -->
+                <div style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 18px; padding: 28px; box-shadow: 0 6px 20px rgba(0,0,0,0.03);">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+                        <span style="padding: 4px 12px; background: #e0e7ff; color: #4338ca; border-radius: 20px; font-size: 0.85rem; font-weight: 600;" data-uz="5–8-sinflar" data-en="Grades 5-8">5–8-sinflar</span>
+                        <span style="font-weight: 700; color: #4338ca; font-size: 1.1rem;">186 kun</span>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--heading-color); margin-bottom: 16px;" data-uz="Jami o‘qish kunlari" data-en="Total Study Days">Jami o‘qish kunlari</h3>
+                    <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.95rem; color: #475569;">
+                        <div style="padding: 10px 14px; background: white; border-radius: 10px; border: 1px solid #e2e8f0;">
+                            <strong style="color: #020617; display: block; margin-bottom: 2px;" data-uz="I semestr (2-sentabr – 18-dekabr):" data-en="Semester I (Sep 2 – Dec 18):">I semestr (2-sentabr – 18-dekabr):</strong>
+                            <span data-uz="71 kun (62 kun dars + 9 kun baholash)" data-en="71 days (62 study days + 9 assessment days)">71 kun (62 kun dars + 9 kun baholash)</span>
+                        </div>
+                        <div style="padding: 10px 14px; background: white; border-radius: 10px; border: 1px solid #e2e8f0;">
+                            <strong style="color: #020617; display: block; margin-bottom: 2px;" data-uz="II semestr (4-yanvar – 18-iyun):" data-en="Semester II (Jan 4 – Jun 18):">II semestr (4-yanvar – 18-iyun):</strong>
+                            <span data-uz="115 kun (105 kun dars + 10 kun baholash)" data-en="115 days (105 study days + 10 assessment days)">115 kun (105 kun dars + 10 kun baholash)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 9-11 sinflar -->
+                <div style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 18px; padding: 28px; box-shadow: 0 6px 20px rgba(0,0,0,0.03);">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+                        <span style="padding: 4px 12px; background: #e0f2fe; color: #0284c7; border-radius: 20px; font-size: 0.85rem; font-weight: 600;" data-uz="9–11-sinflar" data-en="Grades 9-11">9–11-sinflar</span>
+                        <span style="font-weight: 700; color: #0284c7; font-size: 1.1rem;">151+ kun</span>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--heading-color); margin-bottom: 16px;" data-uz="Jami o‘qish kunlari" data-en="Total Study Days">Jami o‘qish kunlari</h3>
+                    <div style="display: flex; flex-direction: column; gap: 10px; font-size: 0.95rem; color: #475569;">
+                        <div style="padding: 10px 14px; background: white; border-radius: 10px; border: 1px solid #e2e8f0;">
+                            <strong style="color: #020617; display: block; margin-bottom: 2px;" data-uz="I semestr (2-sentabr – 18-dekabr):" data-en="Semester I (Sep 2 – Dec 18):">I semestr (2-sentabr – 18-dekabr):</strong>
+                            <span data-uz="71 kun (62 kun dars + 9 kun baholash)" data-en="71 days (62 study days + 9 assessment days)">71 kun (62 kun dars + 9 kun baholash)</span>
+                        </div>
+                        <div style="padding: 10px 14px; background: white; border-radius: 10px; border: 1px solid #e2e8f0;">
+                            <strong style="color: #020617; display: block; margin-bottom: 2px;" data-uz="II semestr (4-yanvar – 18-iyun):" data-en="Semester II (Jan 4 – Jun 18):">II semestr (4-yanvar – 18-iyun):</strong>
+                            <span data-uz="80 kun = 70 kun + Cambridge imtihonlari" data-en="80 days = 70 days + Cambridge exams">80 kun = 70 kun + Cambridge imtihonlari</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ta'tillar -->
+                <div style="background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 18px; padding: 28px; box-shadow: 0 6px 20px rgba(0,0,0,0.03);">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px;">
+                        <span style="padding: 4px 12px; background: #dcfce7; color: #15803d; border-radius: 20px; font-size: 0.85rem; font-weight: 600;" data-uz="Ta'tillar" data-en="Vacations">Ta'tillar</span>
+                        <span style="font-weight: 700; color: #15803d; font-size: 1.1rem;">4 ta davr</span>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--heading-color); margin-bottom: 16px;" data-uz="O‘quvchilar ta’tili" data-en="Student Vacations">O‘quvchilar ta’tili</h3>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 0.9rem;">
+                        <div style="padding: 10px 12px; background: white; border-radius: 10px; border: 1px solid #e2e8f0; text-align: center;">
+                            <span style="display: block; font-weight: 700; color: #15803d; font-size: 1.1rem;">7 kun</span>
+                            <span style="color: #64748b;" data-uz="Kuzgi ta’til" data-en="Autumn Break">Kuzgi ta’til</span>
+                        </div>
+                        <div style="padding: 10px 12px; background: white; border-radius: 10px; border: 1px solid #e2e8f0; text-align: center;">
+                            <span style="display: block; font-weight: 700; color: #15803d; font-size: 1.1rem;">14 kun</span>
+                            <span style="color: #64748b;" data-uz="Qishki ta’til" data-en="Winter Break">Qishki ta’til</span>
+                        </div>
+                        <div style="padding: 10px 12px; background: white; border-radius: 10px; border: 1px solid #e2e8f0; text-align: center;">
+                            <span style="display: block; font-weight: 700; color: #15803d; font-size: 1.1rem;">7 kun</span>
+                            <span style="color: #64748b;" data-uz="Bahorgi ta’til" data-en="Spring Break">Bahorgi ta’til</span>
+                        </div>
+                        <div style="padding: 10px 12px; background: white; border-radius: 10px; border: 1px solid #e2e8f0; text-align: center;">
+                            <span style="display: block; font-weight: 700; color: #15803d; font-size: 1.1rem;">74 kun</span>
+                            <span style="color: #64748b;" data-uz="Yozgi ta’til" data-en="Summer Break">Yozgi ta’til</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Holidays & Teacher Trainings -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 60px;" class="calendar-details-grid">
+            
+            <!-- Bayram kunlari -->
+            <div style="border: 1.5px solid #e2e8f0; border-radius: 18px; padding: 32px; background: white;">
+                <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
+                    <div style="width: 44px; height: 44px; border-radius: 12px; background: #fee2e2; color: #ef4444; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                        <i class="fa-solid fa-calendar-xmark"></i>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--heading-color); margin: 0;" data-uz="Bayram (ishlanmaydigan) kunlari" data-en="Public Holidays (Non-working Days)">Bayram (ishlanmaydigan) kunlari</h3>
+                </div>
+                
+                <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; font-size: 0.95rem; color: #334155;">
+                    <li style="display: flex; justify-content: space-between; padding-bottom: 8px; border-bottom: 1px solid #f1f5f9;">
+                        <span data-uz="Mustaqillik kuni" data-en="Independence Day">Mustaqillik kuni</span>
+                        <strong style="color: #020617;">1-sentabr</strong>
+                    </li>
+                    <li style="display: flex; justify-content: space-between; padding-bottom: 8px; border-bottom: 1px solid #f1f5f9;">
+                        <span data-uz="O‘qituvchi va murabbiylar kuni" data-en="Teachers and Mentors Day">O‘qituvchi va murabbiylar kuni</span>
+                        <strong style="color: #020617;">1-oktabr</strong>
+                    </li>
+                    <li style="display: flex; justify-content: space-between; padding-bottom: 8px; border-bottom: 1px solid #f1f5f9;">
+                        <span data-uz="Konstitutsiya kuni" data-en="Constitution Day">Konstitutsiya kuni</span>
+                        <strong style="color: #020617;">8-dekabr</strong>
+                    </li>
+                    <li style="display: flex; justify-content: space-between; padding-bottom: 8px; border-bottom: 1px solid #f1f5f9;">
+                        <span data-uz="Yangi yil kuni" data-en="New Year's Day">Yangi yil kuni</span>
+                        <strong style="color: #020617;">1-yanvar</strong>
+                    </li>
+                    <li style="display: flex; justify-content: space-between; padding-bottom: 8px; border-bottom: 1px solid #f1f5f9;">
+                        <span data-uz="Xalqaro xotin-qizlar kuni" data-en="International Women's Day">Xalqaro xotin-qizlar kuni</span>
+                        <strong style="color: #020617;">8-mart</strong>
+                    </li>
+                    <li style="display: flex; justify-content: space-between; padding-bottom: 8px; border-bottom: 1px solid #f1f5f9;">
+                        <span data-uz="Navro‘z bayrami" data-en="Nowruz Holiday">Navro‘z bayrami</span>
+                        <strong style="color: #020617;">21-mart</strong>
+                    </li>
+                    <li style="display: flex; justify-content: space-between; padding-bottom: 8px; border-bottom: 1px solid #f1f5f9;">
+                        <span data-uz="Xotira va qadrlash kuni" data-en="Day of Memory and Honor">Xotira va qadrlash kuni</span>
+                        <strong style="color: #020617;">9-may</strong>
+                    </li>
+                    <li style="padding-top: 4px; font-size: 0.85rem; color: #64748b; font-style: italic;" data-uz="* Ramazon Hayiti va Qurbon Hayiti bayramlari sanasi davlat tomonidan tasdiqlangandan so‘ng belgilanadi." data-en="* Dates of Eid al-Fitr and Eid al-Adha are determined upon approval by the government.">
+                        * Ramazon Hayiti va Qurbon Hayiti bayramlari sanasi davlat tomonidan tasdiqlangandan so‘ng belgilanadi.
+                    </li>
+                </ul>
+            </div>
+
+            <!-- O'qituvchilar treninglari -->
+            <div style="border: 1.5px solid #e2e8f0; border-radius: 18px; padding: 32px; background: white;">
+                <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
+                    <div style="width: 44px; height: 44px; border-radius: 12px; background: #fef3c7; color: #d97706; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                    </div>
+                    <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--heading-color); margin: 0;" data-uz="Kasbiy malaka oshirish va yig‘ilishlar" data-en="Professional Training & Faculty Meetings">Kasbiy malaka oshirish va yig‘ilishlar</h3>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 14px; font-size: 0.95rem; color: #334155;">
+                    <div style="background: #fffbeb; border-radius: 12px; padding: 14px 16px; border: 1px solid #fef3c7;">
+                        <strong style="color: #b45309; display: block; margin-bottom: 4px;" data-uz="Malaka oshirish va trening kunlari:" data-en="Training and PD Days:">Malaka oshirish va trening kunlari:</strong>
+                        <span style="font-size: 0.9rem; color: #78350f; line-height: 1.6;">4- va 25-sentabr, 9- va 30-oktabr, 20-noyabr, 4- va 18-dekabr, 8- va 29-yanvar, 5- va 19-fevral, 5- va 19-mart, 2-, 19- va 30-aprel, 21-may, 4-iyun.</span>
+                    </div>
+
+                    <div style="background: #f0fdf4; border-radius: 12px; padding: 14px 16px; border: 1px solid #bbf7d0;">
+                        <strong style="color: #15803d; display: block; margin-bottom: 4px;" data-uz="Fan o‘qituvchilarining yig‘ilishlari:" data-en="Department Faculty Meetings:">Fan o‘qituvchilarining yig‘ilishlari:</strong>
+                        <span style="font-size: 0.9rem; color: #166534; line-height: 1.6;">18-sentabr, 23-oktabr, 27-noyabr, 11-dekabr, 22-yanvar, 26-fevral, 12-mart, 23-aprel, 28-may, 11- va 18-iyun.</span>
+                    </div>
+
+                    <p style="font-size: 0.85rem; color: #64748b; margin: 0; line-height: 1.5;" data-uz="** Har semestr davomida fanlar kesimida o‘quv soatlarining hajmidan kelib chiqib oraliq (summativ) nazoratlar tashkil etiladi." data-en="** Formative and summative assessments are organized during each semester based on course hours.">
+                        ** Har semestr davomida fanlar kesimida o‘quv soatlarining hajmidan kelib chiqib oraliq (summativ) nazoratlar tashkil etiladi.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Embedded PDF Viewer -->
+        <div style="border: 1.5px solid #e2e8f0; border-radius: 20px; overflow: hidden; box-shadow: 0 12px 36px rgba(0,0,0,0.06); background: #f8fafc;">
+            <div style="padding: 18px 24px; background: #0D2460; color: white; display: flex; align-items: center; justify-content: space-between;">
+                <div style="display: flex; align-items: center; gap: 10px; font-weight: 600; font-size: 1rem;">
+                    <i class="fa-solid fa-file-invoice"></i>
+                    <span data-uz="Taqvim hujjati ko'rinishi" data-en="Calendar Document Preview">Taqvim hujjati ko'rinishi</span>
+                </div>
+                <a href="{% static 'documents/akademik_kalendar_2026_2027.pdf' %}" target="_blank" style="color: #38bdf8; text-decoration: none; font-size: 0.9rem; display: flex; align-items: center; gap: 6px;">
+                    <span data-uz="Kattaroq ko'rish" data-en="View Larger">Kattaroq ko'rish</span>
+                    <i class="fa-solid fa-expand"></i>
+                </a>
+            </div>
+            
+            <div style="width: 100%; height: 850px; background: #e2e8f0;" class="pdf-container">
+                <iframe src="{% static 'documents/akademik_kalendar_2026_2027.pdf' %}#toolbar=1" width="100%" height="100%" style="border: none;">
+                    <p style="padding: 40px; text-align: center;">
+                        <span data-uz="Sizning brauzeringiz PDF-ni to'g'ridan-to'g'ri ko'rsata olmaydi." data-en="Your browser does not support inline PDFs.">Sizning brauzeringiz PDF-ni to'g'ridan-to'g'ri ko'rsata olmaydi.</span>
+                        <br>
+                        <a href="{% static 'documents/akademik_kalendar_2026_2027.pdf' %}" download class="btn btn-primary" style="margin-top: 16px;">
+                            <span data-uz="Faylni yuklab olish" data-en="Download File">Faylni yuklab olish</span>
+                        </a>
+                    </p>
+                </iframe>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<style>
+    @media (max-width: 992px) {
+        .calendar-action-banner {
+            flex-direction: column;
+            align-items: flex-start !important;
+        }
+        .calendar-highlights-grid {
+            grid-template-columns: 1fr !important;
+        }
+        .calendar-details-grid {
+            grid-template-columns: 1fr !important;
+        }
+        .pdf-container {
+            height: 550px !important;
+        }
+    }
+</style>
+{% endblock %}

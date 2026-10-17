@@ -1152,6 +1152,27 @@ button {
   }
 }
 
+@media (max-width: 992px) {
+  .president-quote-section {
+    padding: 60px 0;
+    margin: 60px auto;
+  }
+
+  .president-quote-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .president-image img {
+    max-width: 360px;
+  }
+
+  .quote-author-block {
+    justify-content: center;
+  }
+}
+
 @media (max-width: 768px) {
   .top-header-left span,
   .top-header-left .fa-envelope,
@@ -1226,8 +1247,31 @@ button {
     gap: 32px;
   }
 
+  .president-quote-section {
+    padding: 50px 0;
+    margin: 40px auto;
+  }
+
   .president-quote-container {
-    margin-top: 24px;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .president-image img {
+    max-width: 300px;
+  }
+
+  .quote-heading {
+    font-size: 1.75rem;
+    margin-bottom: 16px;
+  }
+
+  .quote-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 28px;
   }
 
   .gallery-item,
@@ -1275,6 +1319,42 @@ button {
 }
 
 @media (max-width: 480px) {
+  .president-quote-section {
+    padding: 36px 0;
+    margin: 30px auto;
+  }
+
+  .president-quote-container {
+    gap: 24px;
+  }
+
+  .president-image img {
+    max-width: 240px;
+  }
+
+  .quote-heading {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+  }
+
+  .quote-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  .gerb-icon {
+    width: 48px;
+  }
+
+  .author-name {
+    font-size: 1.1rem;
+  }
+
+  .author-title {
+    font-size: 0.85rem;
+  }
+
   .hero-title {
     font-size: 2rem;
   }

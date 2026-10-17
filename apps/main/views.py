@@ -26,3 +26,6 @@ def about(request):
 
 def admission(request):
     return render(request, 'admission.html')
+
+def academic_calendar(request):
+    return render(request, 'academic_calendar.html')

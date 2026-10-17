@@ -70,7 +70,7 @@
 
         <nav class="nav-right">
             <a href="{% url 'main:admission' %}" class="nav-link" data-uz="Qabul" data-en="Admission">Qabul</a>
-            <a href="#" class="nav-link" data-uz="Akademik kalendar" data-en="Academic Calendar">Akademik kalendar</a>
+            <a href="{% url 'main:academic_calendar' %}" class="nav-link" data-uz="Akademik kalendar" data-en="Academic Calendar">Akademik kalendar</a>
             <a href="{% url 'main:contact' %}" class="nav-link" data-uz="Bog'lanish" data-en="Contact">Bog'lanish</a>
         </nav>
 
@@ -94,7 +94,7 @@
         </div>
         <a href="{% url 'main:education' %}" class="mobile-nav-link" data-uz="Ta'lim" data-en="Education">Ta'lim</a>
         <a href="{% url 'main:admission' %}" class="mobile-nav-link" data-uz="Qabul" data-en="Admission">Qabul</a>
-        <a href="#" class="mobile-nav-link" data-uz="Akademik kalendar" data-en="Academic Calendar">Akademik kalendar</a>
+        <a href="{% url 'main:academic_calendar' %}" class="mobile-nav-link" data-uz="Akademik kalendar" data-en="Academic Calendar">Akademik kalendar</a>
         <a href="#" class="mobile-nav-link" data-uz="Bog'lanish" data-en="Contact">Bog'lanish</a>
     </nav>
 
@@ -120,7 +120,7 @@
                         <li><a href="{% url 'main:about' %}" data-uz="Maktab haqida" data-en="About School">Maktab haqida</a></li>
                         <li><a href="{% url 'main:education' %}" data-uz="Ta'lim" data-en="Education">Ta'lim</a></li>
                         <li><a href="{% url 'main:admission' %}" data-uz="Qabul" data-en="Admission">Qabul</a></li>
-                        <li><a href="#" data-uz="Akademik kalendar" data-en="Academic Calendar">Akademik kalendar</a></li>
+                        <li><a href="{% url 'main:academic_calendar' %}" data-uz="Akademik kalendar" data-en="Academic Calendar">Akademik kalendar</a></li>
                     </ul>
                 </div>
 

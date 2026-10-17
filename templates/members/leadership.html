@@ -10,8 +10,10 @@
             {% for leader in leaders %}
             <div class="leader-card" style="background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); text-align: center; transition: transform 0.3s ease;">
                 <div style="width: 100%; height: 320px; overflow: hidden; background-color: #f1f5f9;">
-                    {% if leader.photo %}
-                    <img src="{{ leader.photo.url }}" alt="{{ leader.first_name }}" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+                    {% if 'maslahat' in leader.occupation.lower or 'counselor' in leader.occupation.lower %}
+                    <img src="{% static 'images/counselor.jpg' %}" alt="{{ leader.first_name }} {{ leader.last_name }}" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;">
+                    {% elif leader.photo %}
+                    <img src="{{ leader.photo.url }}" alt="{{ leader.first_name }} {{ leader.last_name }}" style="width: 100%; height: 100%; object-fit: cover; object-position: center top;" onerror="this.onerror=null; this.src='{% static 'images/counselor.jpg' %}';">
                     {% else %}
                     <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: #cbd5e1;">
                         <i class="fa-solid fa-user"></i>
