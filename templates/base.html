@@ -24,7 +24,7 @@
     <div class="top-header">
         <div class="container" style="display:flex;justify-content:space-between;align-items:center;">
             <div class="top-header-left">
-                <a href="tel:+998912345678"><i class="fa-solid fa-phone"></i> <span data-uz="+998 75 220 07 70" data-en="+998 75 220 07 70">+998 75 220 07 70</span></a>
+                <a href="tel:+998752200770"><i class="fa-solid fa-phone"></i> <span data-uz="+998 75 220 07 70" data-en="+998 75 220 07 70">+998 75 220 07 70</span></a>
                 <a href="mailto:info@karships.uz"><i class="fa-solid fa-envelope"></i> info@karships.uz</a>
             </div>
             <div class="top-header-right">
@@ -54,7 +54,7 @@
             <div class="nav-dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-uz="Biz haqimizda" data-en="About Us">Biz haqimizda <i class="fa-solid fa-chevron-down"></i></a>
                 <div class="dropdown-menu">
-                    <a href="#" class="dropdown-item" data-uz="Maktab haqida" data-en="About School">Maktab haqida</a>
+                    <a href="{% url 'main:about' %}" class="dropdown-item" data-uz="Maktab haqida" data-en="About School">Maktab haqida</a>
                     <a href="{% url 'members:leadership' %}" class="dropdown-item" data-uz="Rahbariyat" data-en="Leadership">Rahbariyat</a>
                     <a href="{% url 'members:teachers' %}" class="dropdown-item" data-uz="Pedagoglar" data-en="Teachers">Pedagoglar</a>
                     <a href="https://vacancy.piima.uz/" target="_blank" class="dropdown-item" data-uz="Bo'sh ish o'rinlari" data-en="Vacancies">Bo'sh ish o'rinlari</a>
@@ -69,7 +69,7 @@
         </a>
 
         <nav class="nav-right">
-            <a href="#" class="nav-link" data-uz="Qabul" data-en="Admission">Qabul</a>
+            <a href="{% url 'main:admission' %}" class="nav-link" data-uz="Qabul" data-en="Admission">Qabul</a>
             <a href="#" class="nav-link" data-uz="Akademik kalendar" data-en="Academic Calendar">Akademik kalendar</a>
             <a href="{% url 'main:contact' %}" class="nav-link" data-uz="Bog'lanish" data-en="Contact">Bog'lanish</a>
         </nav>
@@ -86,14 +86,14 @@
         <div class="mobile-dropdown">
             <button class="mobile-dropdown-toggle" data-uz="Biz haqimizda" data-en="About Us" type="button">Biz haqimizda <i class="fa-solid fa-chevron-down"></i></button>
             <div class="mobile-dropdown-menu">
-                <a href="#" data-uz="Maktab haqida" data-en="About School">Maktab haqida</a>
+                <a href="{% url 'main:about' %}" data-uz="Maktab haqida" data-en="About School">Maktab haqida</a>
                 <a href="{% url 'members:leadership' %}" data-uz="Rahbariyat" data-en="Leadership">Rahbariyat</a>
                 <a href="{% url 'members:teachers' %}" data-uz="Pedagoglar" data-en="Teachers">Pedagoglar</a>
                 <a href="https://vacancy.piima.uz/" target="_blank" data-uz="Bo'sh ish o'rinlari" data-en="Vacancies">Bo'sh ish o'rinlari</a>
             </div>
         </div>
         <a href="{% url 'main:education' %}" class="mobile-nav-link" data-uz="Ta'lim" data-en="Education">Ta'lim</a>
-        <a href="#" class="mobile-nav-link" data-uz="Qabul" data-en="Admission">Qabul</a>
+        <a href="{% url 'main:admission' %}" class="mobile-nav-link" data-uz="Qabul" data-en="Admission">Qabul</a>
         <a href="#" class="mobile-nav-link" data-uz="Akademik kalendar" data-en="Academic Calendar">Akademik kalendar</a>
         <a href="#" class="mobile-nav-link" data-uz="Bog'lanish" data-en="Contact">Bog'lanish</a>
     </nav>
@@ -117,9 +117,9 @@
                 <div class="footer-col">
                     <h3 class="footer-heading" data-uz="Tezkor havolalar" data-en="Quick Links">Tezkor havolalar</h3>
                     <ul class="footer-links">
-                        <li><a href="#" data-uz="Maktab haqida" data-en="About School">Maktab haqida</a></li>
+                        <li><a href="{% url 'main:about' %}" data-uz="Maktab haqida" data-en="About School">Maktab haqida</a></li>
                         <li><a href="{% url 'main:education' %}" data-uz="Ta'lim" data-en="Education">Ta'lim</a></li>
-                        <li><a href="#" data-uz="Qabul" data-en="Admission">Qabul</a></li>
+                        <li><a href="{% url 'main:admission' %}" data-uz="Qabul" data-en="Admission">Qabul</a></li>
                         <li><a href="#" data-uz="Akademik kalendar" data-en="Academic Calendar">Akademik kalendar</a></li>
                     </ul>
                 </div>
