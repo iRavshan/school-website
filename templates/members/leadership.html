@@ -22,15 +22,15 @@
                     <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--primary); margin-bottom: 8px;">{{ leader.first_name }} {{ leader.last_name }}</h3>
                     <p style="color: #64748b; font-size: 1rem; margin-bottom: 16px; font-weight: 500;">{{ leader.occupation }}</p>
                     {% if leader.is_local %}
-                    <span style="display: inline-block; padding: 4px 12px; background-color: #e0f2fe; color: #0284c7; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Mahalliy mutaxassis</span>
+                    <span style="display: inline-block; padding: 4px 12px; background-color: #e0f2fe; color: #0284c7; border-radius: 20px; font-size: 0.85rem; font-weight: 600;" data-uz="Mahalliy mutaxassis" data-en="Local Specialist">Mahalliy mutaxassis</span>
                     {% else %}
-                    <span style="display: inline-block; padding: 4px 12px; background-color: #fce7f3; color: #db2777; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">Xorijiy mutaxassis</span>
+                    <span style="display: inline-block; padding: 4px 12px; background-color: #fce7f3; color: #db2777; border-radius: 20px; font-size: 0.85rem; font-weight: 600;" data-uz="Xorijiy mutaxassis" data-en="International Specialist">Xorijiy mutaxassis</span>
                     {% endif %}
                 </div>
             </div>
             {% empty %}
             <div style="grid-column: 1 / -1; text-align: center; padding: 60px 0; color: #64748b; font-size: 1.1rem;">
-                <p>Hozircha ma'lumot kiritilmagan.</p>
+                <p data-uz="Hozircha ma'lumot kiritilmagan." data-en="No information available yet.">Hozircha ma'lumot kiritilmagan.</p>
             </div>
             {% endfor %}
         </div>
